@@ -49,9 +49,9 @@ public class Entry implements Comparable<Object> {
 	
 	public static String checkPhoneNumber(String phoneNumber) throws InvalidPhoneException {
 		if (phoneNumber != null) {			
-			String regex1 = "/\\+359 [8[789]] [2-9]{1} [0-9]{6}/";
-			String regex2 = "/0 [8[789]] [2-9]{1} [0-9]{6}/";
-			String regex3 = "/00359 [8[789]] [2-9]{1} [0-9]{6}/";
+			String regex1 = "/+359 [8[7-9]] [2-9]{1} [0-9]{6}/";
+			String regex2 = "/0 [8[7-9]] [2-9]{1} [0-9]{6}/";
+			String regex3 = "/00359 [8[7-9]] [2-9]{1} [0-9]{6}/";
 			
 			if (phoneNumber.length() == POSSIBLE_LENGTH1 || phoneNumber.length() == POSSIBLE_LENGTH_2 || phoneNumber.length() == POSSIBLE_LENGTH_3) {
 			if(phoneNumber.matches(regex1) || phoneNumber.matches(regex2) || phoneNumber.matches(regex3)){
